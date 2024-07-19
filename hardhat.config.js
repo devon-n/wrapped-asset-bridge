@@ -57,7 +57,7 @@ module.exports = {
             runs: 200
           }
         }
-      }    
+      }
     ]
   },
   contractSizer: {
@@ -73,8 +73,18 @@ module.exports = {
   },
 
   networks: {
+    base: {
+      url: "https://base-pokt.nodies.app",
+      chainId: 8453,
+      accounts: accounts(),
+    },
+    etherlink: {
+      url: "https://node.mainnet.etherlink.com",
+      chainId: 42793,
+      accounts: accounts(),
+    },
     ethereum: {
-      url: "https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
+      url: "https://eth-mainnet.g.alchemy.com/v2/LOIJU0B-Apn5n_VHRhC7H8iGk0zlyUgv",
       chainId: 1,
       accounts: accounts(),
     },
