@@ -33,7 +33,7 @@ const { WrappedAssetBridgeAbi } = require("./WrappedAssetBridgeAbi")
     ARB: USDC, USDT, WBTC, WETH
 */
 
-taskArgs = {
+const taskArgs = {
     originalNetwork: "avalanche",
     amount: "0.000001",
     decimals: "18",
@@ -129,7 +129,7 @@ async function bridgeERC0() {
     console.log(`Bridged ${tx.hash}`)
 }
 
-// bridgeERC0()
+// bridgeERC0() // For all networks
 // OP: USDT worked
 
 // AvalancheChain USDC: Call Exception
@@ -143,7 +143,7 @@ async function bridgeERC0() {
 // ARB: USDC Call Exception
 // ARB: WBTC Call Exception
 
-unwrap()
+unwrap() // For network --etherlink
 // optimism worked
 // base worked
 // arb worked
@@ -151,7 +151,7 @@ unwrap()
 // eth call exception
 // bsc call exception
 
-// nativeToWrapped()
+// nativeToWrapped() // for network != etherlink
 // Avax works
 // Ethereum works
 // arb works
